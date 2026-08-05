@@ -6,6 +6,7 @@ import traceback
 from core import *
 from engine import HullWhiteCurveEngine
 from reporting import *
+from reporting import _build_stability_config
 
 
 if __name__ == "__main__":
