@@ -18,6 +18,20 @@ I originally wanted to understand Hull-White beyond just the equation. The harde
 - compares base, +50 bp, and -50 bp curve scenarios
 - plots the curve and simulated paths
 
+## Sample outputs
+
+### Yield-curve scenario comparison
+
+![Yield-curve scenario comparison](images/scenario_comparison.svg)
+
+### Monte Carlo check
+
+![Monte Carlo validation](images/monte_carlo_validation.svg)
+
+### Drift smoothing
+
+![Hull-White drift regularization](images/theta_regularization.svg)
+
 ## Model
 
 I use the one-factor Hull-White process
@@ -51,6 +65,7 @@ The tests are basic sanity checks for the bootstrap, a flat curve, the Hull-Whit
 hull_white_engine.py        curve construction, model, simulation, and plots
 test_hull_white_engine.py   small regression test suite
 requirements.txt
+images/                     sample graphs
 ```
 
 ## Limits
