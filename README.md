@@ -6,7 +6,7 @@ The script pulls U.S. Treasury CMT yields, bootstraps an approximate zero curve,
 
 ## Why I built it
 
-I originally wanted to understand Hull-White beyond just the equation. The harder part turned out to be the curve underneath the model. Treasury CMT yields are par yields, so I had to convert them into discount factors and zero rates before using them in the model. I also ran into instability when differentiating the forward curve, which pushed me to smooth the log discount curve before calculating the drift.
+I originally wanted to understand Hull-White beyond just the equation. The harder part turned out to be the curve underneath the model. Treasury CMT yields are par yields, so I had to convert them into discount factors and zero rates before using them in the model. I also ran into instability when differentiating the forward curve, which is why the script uses a light smoothing spline before calculating the drift.
 
 ## What it does
 
@@ -16,7 +16,7 @@ I originally wanted to understand Hull-White beyond just the equation. The harde
 - builds the Hull-White drift term
 - simulates short-rate paths
 - compares base, +50 bp, and -50 bp curve scenarios
-- plots a few diagnostics so I can see when the model is behaving badly
+- plots the curve and simulated paths
 
 ## Model
 
@@ -43,16 +43,14 @@ python hull_white_engine.py
 python -m unittest test_hull_white_engine.py
 ```
 
-The tests are mainly sanity checks for the bootstrap, curve construction, simulation, and a few unusual curve shapes.
+The tests are basic sanity checks for the bootstrap, a flat curve, the Hull-White drift, simulation moments, and a parallel curve shock.
 
 ## Files
 
 ```text
-hull_white_engine.py   main file to run
-core.py                data loading and curve setup
-engine.py              Hull-White calculations and simulation
-reporting.py           plots and printed output
-test_hull_white_engine.py
+hull_white_engine.py        curve construction, model, simulation, and plots
+test_hull_white_engine.py   small regression test suite
+requirements.txt
 ```
 
 ## Limits
