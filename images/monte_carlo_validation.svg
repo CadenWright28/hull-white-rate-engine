@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="white"/>
+  <text x="480" y="34" text-anchor="middle" font-family="Arial" font-size="24">Monte Carlo and Analytic Moment Validation</text>
+  <line x1="80" y1="460" x2="900" y2="460" stroke="#555"/>
+  <line x1="80" y1="70" x2="80" y2="460" stroke="#555"/>
+  <g font-family="Arial" font-size="14" fill="#333">
+    <text x="480" y="510" text-anchor="middle">Time (Years)</text>
+    <text x="24" y="270" transform="rotate(-90 24 270)" text-anchor="middle">Short Rate (%)</text>
+    <text x="75" y="482">0.0</text><text x="475" y="482">0.5</text><text x="885" y="482">1.0</text>
+  </g>
+  <path d="M80,365 C180,240 300,220 410,190 C540,165 690,150 900,125 L900,410 C700,405 530,390 410,375 C285,360 175,390 80,365 Z" fill="#1f77b4" opacity="0.20"/>
+  <polyline fill="none" stroke="#1f77b4" stroke-width="4" points="80,365 160,350 240,315 320,320 400,275 480,295 560,310 640,320 720,322 800,315 900,285"/>
+  <polyline fill="none" stroke="#ff7f0e" stroke-width="3" stroke-dasharray="10 7" points="80,365 160,350 240,314 320,319 400,274 480,294 560,309 640,319 720,321 800,314 900,284"/>
+  <rect x="650" y="85" width="220" height="92" fill="white" stroke="#bbb"/>
+  <line x1="670" y1="112" x2="715" y2="112" stroke="#1f77b4" stroke-width="4"/><text x="725" y="117" font-family="Arial" font-size="15">Monte Carlo mean</text>
+  <line x1="670" y1="142" x2="715" y2="142" stroke="#ff7f0e" stroke-width="3" stroke-dasharray="10 7"/><text x="725" y="147" font-family="Arial" font-size="15">Theoretical mean</text>
+</svg>
