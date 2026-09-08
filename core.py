@@ -1,19 +1,4 @@
-"""Hull-White one-factor yield-curve and rate-simulation engine.
-
-Version 4.1 corrections:
-- Treat U.S. Treasury CMT observations as par yields, not zero yields.
-- Build an approximate zero-coupon curve by semiannual par bootstrapping.
-- Anchor the discount curve at P(0, 0) = 1 and use f(0, 0) as the short rate.
-- Use the correct Hull-White fitting term and exact OU state transitions.
-- Fit a regularized cubic spline to log discount factors for a smooth forward
-  curve and drift function while retaining the original pricing curve.
-- Keep user-specified a and sigma clearly separate from market calibration.
-
-The Treasury-to-zero conversion is an approximation because Treasury publishes
-par yields, not its internal zero curve or the security-level prices used to
-construct that curve. The model is suitable for education, scenario analysis,
-and portfolio demonstration; it is not a production trading or valuation system.
-"""
+"""Curve data and shared helpers for the Hull-White model."""
 
 from __future__ import annotations
 
